@@ -23,10 +23,6 @@ public class SecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/actuator*")
-                .permitAll()
-                .requestMatchers("/actuator/*")
-                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
