@@ -1,0 +1,56 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - data:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=rootuser
+      - MONGO_INITDB_ROOT_PASSWORD=rootpass
+    networks:
+      - the_net
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+    networks:
+      - the_net
+  data-access-service:
+    image: data-access
+    container_name: data-access-service
+    restart: always
+    ports:
+      - "8091:8091"
+    networks:
+      - the_net
+  auth-service:
+    image: auth
+    container_name: auth-service
+    restart: always
+    ports:
+      - "8090:8090"
+    networks:
+      - the_net
+  conversation-service:
+    image: conversation
+    container_name: conversation-service
+    restart: always
+    ports:
+      - "8092:8092"
+    networks:
+      - the_net
+
+volumes:
+  data: {}
+
+networks:
+  the_net:

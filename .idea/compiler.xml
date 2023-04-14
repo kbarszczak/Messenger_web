@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="authentication-service" />
+        <module name="common" />
+        <module name="conversation-service" />
+        <module name="data-access" />
+        <module name="client" />
+        <module name="Client" />
+        <module name="AuthenticationService" />
+        <module name="ConversationService" />
+        <module name="DataAccess" />
+        <module name="Common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AuthenticationService" options="-parameters" />
+      <module name="Client" options="-parameters" />
+      <module name="Common" options="-parameters" />
+      <module name="ConversationService" options="-parameters" />
+      <module name="DataAccess" options="-parameters" />
+      <module name="Messenger" options="-parameters" />
+      <module name="authentication-service" options="-parameters" />
+      <module name="client" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="conversation-service" options="-parameters" />
+      <module name="data-access" options="-parameters" />
+    </option>
+  </component>
+</project>
