@@ -1,4 +1,4 @@
-![banner](https://user-images.githubusercontent.com/72699445/232029707-85f96d63-53f3-4714-9e67-2f261ce2461a.png)
+![banner](https://user-images.githubusercontent.com/72699445/232042925-7852a862-304a-4731-827e-271326f45354.png)
 
 The project is a messenger application with a simple console client that visualizes how the app works. The backend is written in Java Spring Boot framework and it has a microservice architecture. There are 3 microservices (data access, conversation, authentication) that are cooperating with each other.
 
